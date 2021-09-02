@@ -1,5 +1,7 @@
 package sumOfTwoNumbers
 
+import "fmt"
+
 // 链表定义
 type ListNode struct {
 	Val  int
@@ -43,3 +45,37 @@ func AddTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 
 	return l3
 }
+
+func (l *ListNode)InsertAtHead(data int) *ListNode{
+	if l == nil {
+		return &ListNode{Val: data}
+	}
+	tmp := l
+	l = &ListNode{Val: data}
+	l.Next = tmp
+
+	return l
+}
+func (l *ListNode)Show(){
+
+	for pos := l; pos != nil; pos = pos.Next {
+		fmt.Printf("%d ", pos.Val)
+	}
+	fmt.Println()
+}
+
+func(l *ListNode) Equal(list *ListNode) bool {
+	pos1, pos2 := l, list
+	for ; pos1 != nil && pos2 != nil; pos1, pos2 = pos1.Next, pos2.Next {
+		if pos1.Val != pos2.Val {
+			return false
+		}
+	}
+
+	if pos1 != nil || pos2 != nil {
+		return false
+	}
+
+	return true
+}
+
