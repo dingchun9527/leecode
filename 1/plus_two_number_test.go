@@ -6,7 +6,7 @@ import (
 )
 
 func TestTwoSum(t *testing.T) {
-	array := []int{2,7,11,15}
+	array := []int{2, 7, 11, 15}
 	target := 9
 	index := TwoSum(array, target)
 	assert.Equal(t, 2, len(index))

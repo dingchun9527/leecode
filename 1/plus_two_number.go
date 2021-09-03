@@ -9,7 +9,7 @@ func TwoSum(nums []int, target int) []int {
 		if liy, ok := destMap[num]; ok {
 			return []int{liy, lix}
 		}
-		destMap[target -num ] = lix
+		destMap[target-num] = lix
 	}
 
 	return []int{0, 0}
