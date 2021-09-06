@@ -1,7 +1,5 @@
 package myAtoi
 
-import "fmt"
-
 // 功能: 实现一个Atoi
 // 思路: 挨个读取, 在转换
 func MyAtoi(s string) int {
