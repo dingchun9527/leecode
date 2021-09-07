@@ -4,7 +4,7 @@ package myAtoi
 // 思路: 挨个读取, 在转换
 func MyAtoi(s string) int {
 	var result float64
-	flag, isNumber :=' ', false
+	flag, isNumber := ' ', false
 	for _, ch := range s {
 
 		// 去除前导空格
@@ -19,7 +19,7 @@ func MyAtoi(s string) int {
 		}
 
 		// 符号判断
-		if ch == '-' || ch == '+'{
+		if ch == '-' || ch == '+' {
 			if isNumber && result == 0.0 {
 				return 0
 			}
@@ -40,7 +40,7 @@ func MyAtoi(s string) int {
 			break
 		}
 
-		result = result *10 + float64(ch) - '0'
+		result = result*10 + float64(ch) - '0'
 		isNumber = true
 	}
 
@@ -52,7 +52,7 @@ func MyAtoi(s string) int {
 		return 2147483647
 	}
 
-	if  result < -2147483648 {
+	if result < -2147483648 {
 		return -2147483648
 	}
 
