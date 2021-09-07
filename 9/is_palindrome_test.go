@@ -1,7 +1,10 @@
 package isPalindrome
 
-import "testing"
+import (
+	"github.com/stretchr/testify/assert"
+	"testing"
+)
 
 func TestIsPalindrome(t *testing.T) {
-	IsPalindrome(10)
+	assert.Equal(t, false, IsPalindrome(10))
 }
