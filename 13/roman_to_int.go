@@ -18,10 +18,10 @@ func RomanToInt(s string) int {
 		"M":  1000,
 	}
 
-	result, label :=0, ""
-	for i:=0; i<len(s); {
+	result, label := 0, ""
+	for i := 0; i < len(s); {
 		if i+1 < len(s) {
-			label = s[i:i+2]
+			label = s[i : i+2]
 			if unit, ok := mappingList[label]; ok {
 				result += unit
 				i += 2
@@ -29,7 +29,7 @@ func RomanToInt(s string) int {
 			}
 		}
 
-		label = s[i:i+1]
+		label = s[i : i+1]
 		unit := mappingList[label]
 		result += unit
 		i++
