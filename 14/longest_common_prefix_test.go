@@ -6,5 +6,5 @@ import (
 )
 
 func TestLongestCommonPrefix(t *testing.T) {
-	assert.Equal(t, "fl", LongestCommonPrefix([]string{"flower","flow","flight"}))
+	assert.Equal(t, "fl", LongestCommonPrefix([]string{"flower", "flow", "flight"}))
 }
