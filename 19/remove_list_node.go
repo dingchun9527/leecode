@@ -37,3 +37,24 @@ func RemoveNthFromEnd(head *ListNode, n int) *ListNode {
 
 	return head
 }
+
+// 思路: 使用快慢指针的方法来获取位置
+func RemoveNthFromEnd1(head *ListNode, n int) *ListNode {
+	first, second:= head, head
+	var prev *ListNode
+
+	for i:=0; i<n && first != nil; first,i = first.Next,i+1 {}
+
+	for ;first !=nil; first, second = first.Next, second.Next {
+		prev = second
+	}
+
+	// 删除的是第一个节点
+	if second == head {
+		head = second.Next
+	} else {
+		prev.Next = second.Next
+	}
+
+	return head
+}
