@@ -1,23 +1,29 @@
 package generateParenthesis
 
-import "fmt"
-
 // 功能: 数字 n 代表生成括号的对数，请你设计一个函数，用于能够生成所有可能的并且 有效的 括号组合。
-// 思路: 使用递归的方式实现
+// 思路: 左括号小于等于右括号, 递归尝试所有可能性
 
 func generateParenthesis(n int) []string {
 
-	// 当n等于1, 达到递归边界, 直接返回()
-	if n == 1 {
-		return []string{"()"}
+	return getParenthesis("", n, n)
+}
+
+func getParenthesis(content string, left, right int) []string {
+	if left ==0 && right == 0 {
+		return []string{content}
 	}
 
+	// 左边括号等于右边, 此时只能用左括号
 	var results []string
-	list := generateParenthesis(n-1)
-	for _, item := range list{
-		results = append(results, fmt.Sprintf("%s%s", item, "()"))
-		results = append(results, fmt.Sprintf("%c%s%c", '(', item, ')'))
+	if left == right {
+		return getParenthesis(content+"(", left-1, right)
+	} else {
+		if left > 0 {
+			result := getParenthesis(content+"(", left-1, right)
+			results = append(results, result...)
+		}
+		result := getParenthesis(content+")", left, right-1)
+		results = append(results, result...)
 	}
-
 	return results
 }
