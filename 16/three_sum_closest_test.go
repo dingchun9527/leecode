@@ -6,5 +6,5 @@ import (
 )
 
 func TestThreeSumClosest(t *testing.T) {
-	assert.Equal(t, -101, ThreeSumClosest([]int{-100,-98,-2,-1}, -101))
+	assert.Equal(t, -101, ThreeSumClosest([]int{-100, -98, -2, -1}, -101))
 }
