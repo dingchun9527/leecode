@@ -8,11 +8,10 @@ type ListNode struct {
 	Next *ListNode
 }
 
-
 func MergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
 	var head, curr *ListNode
 
-	for curr1, curr2:= l1, l2; curr1 != nil || curr2 !=nil; {
+	for curr1, curr2 := l1, l2; curr1 != nil || curr2 != nil; {
 
 		if curr1 != nil && curr2 != nil {
 			if curr1.Val < curr2.Val {

@@ -9,7 +9,7 @@ func generateParenthesis(n int) []string {
 }
 
 func getParenthesis(content string, left, right int) []string {
-	if left ==0 && right == 0 {
+	if left == 0 && right == 0 {
 		return []string{content}
 	}
 

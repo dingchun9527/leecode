@@ -40,12 +40,13 @@ func RemoveNthFromEnd(head *ListNode, n int) *ListNode {
 
 // 思路: 使用快慢指针的方法来获取位置
 func RemoveNthFromEnd1(head *ListNode, n int) *ListNode {
-	first, second:= head, head
+	first, second := head, head
 	var prev *ListNode
 
-	for i:=0; i<n && first != nil; first,i = first.Next,i+1 {}
+	for i := 0; i < n && first != nil; first, i = first.Next, i+1 {
+	}
 
-	for ;first !=nil; first, second = first.Next, second.Next {
+	for ; first != nil; first, second = first.Next, second.Next {
 		prev = second
 	}
 

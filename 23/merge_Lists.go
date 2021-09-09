@@ -8,7 +8,6 @@ type ListNode struct {
 	Next *ListNode
 }
 
-
 func mergeKLists(lists []*ListNode) *ListNode {
 	listArray := make([]*ListNode, len(lists))
 
