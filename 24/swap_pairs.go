@@ -10,7 +10,7 @@ type ListNode struct {
 
 func SwapPairs(head *ListNode) *ListNode {
 	var prev, curr, next *ListNode
-	for curr=head; curr!=nil && curr.Next != nil; curr= curr.Next {
+	for curr = head; curr != nil && curr.Next != nil; curr = curr.Next {
 		next = curr.Next
 		curr.Next = next.Next
 		next.Next = curr
@@ -19,7 +19,7 @@ func SwapPairs(head *ListNode) *ListNode {
 			prev = curr
 			head = next
 		} else {
-			prev.Next=next
+			prev.Next = next
 			prev = curr
 
 		}
@@ -27,5 +27,3 @@ func SwapPairs(head *ListNode) *ListNode {
 
 	return head
 }
-
-
