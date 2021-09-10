@@ -13,7 +13,7 @@ func RemoveDuplicates(nums []int) int {
 
 	// 去除重复元素
 	noDupCount := 0
-	for i:=0; i<len(nums);i++ {
+	for i := 0; i < len(nums); i++ {
 		if nums[i] == nums[noDupCount] {
 			continue
 		}
@@ -21,5 +21,5 @@ func RemoveDuplicates(nums []int) int {
 		nums[noDupCount] = nums[i]
 	}
 
-	return noDupCount+1
+	return noDupCount + 1
 }
