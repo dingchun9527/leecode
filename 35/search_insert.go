@@ -4,7 +4,7 @@ package searchInsert
 // 要求: 时间复杂度为O(log n)
 
 
-func searchInsert(nums []int, target int) int {
+func SearchInsert(nums []int, target int) int {
 	length := len(nums)
 
 	l, r, mid, ans := 0, length - 1, 0, length
