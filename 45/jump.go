@@ -6,7 +6,7 @@ package jump
 // 思路: 从倒数第二个元素开始反推, 计算每个节点需要的最小步数
 // 采用动态规划的方法来实现
 
-func jump(nums []int) int {
+func Jump(nums []int) int {
 	length := len(nums)
 	dp := make([]int, length)
 
