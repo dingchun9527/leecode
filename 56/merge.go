@@ -5,7 +5,7 @@ import "sort"
 // 功能: 合并区间
 // 思路: 使用第一个元素进行排序, 可合并的区间一定是连续的
 
-func merge(intervals [][]int) [][]int {
+func Merge(intervals [][]int) [][]int {
 
 	if len(intervals) <= 1 {
 		return intervals
